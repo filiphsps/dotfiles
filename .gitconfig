@@ -1,0 +1,7 @@
+[user]
+	name = Filiph Siitam Sandström
+	email = filiph.sandstrom@filfatstudios.com
+[status]
+	showUntrackedFiles = all
+[core]
+	editor = vim
