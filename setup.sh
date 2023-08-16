@@ -59,12 +59,15 @@ fi
 
 ask "Run platform-specific steps?" && case "$OS" in
 	"macOS")
-		./install-macos.sh
+		./setup-macos.sh
 		;;
 	"Ubuntu Linux")
-		./install-ubuntu.sh
+		./setup-ubuntu.sh
 		;;
 	"Alpine Linux")
-		./install-alpine.sh
+		./setup-alpine.sh
 		;;
 esac
+
+ask "Copy gitconfig?" && checked_copy .gitconfig ~/.gitconfig
+ask "Copy gitattributes?" && checked_copy .gitattributes ~/.gitattributes
