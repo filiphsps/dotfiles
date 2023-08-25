@@ -12,6 +12,9 @@ fi
 URL_NVM='https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh'
 
 # utils
+remove_snap() {
+    echo "TODO"
+}
 install_node() {
     echo | /bin/bash -c "$(curl -fsSL $URL_NVM)" > /dev/null
     (
@@ -23,10 +26,15 @@ install_node() {
 install_flatpack() {
     echo "TODO"
 }
-remove_snap() {
-    echo "TODO"
+install_git() {
+    
+}
+configure_git() {
+    git config --global init.defaultBranch
 }
 
-ask "Install node (latest)" && install_node
 ask "Remove snap" && remove_snap
+ask "Install node (latest)" && install_node
 ask "Install flatpack" && install_flatpack
+ask "Install git" && install_git
+ask "Configure git" && configure_git
